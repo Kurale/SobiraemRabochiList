@@ -107,8 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `).join('');
         
-        // Показываем контейнер с рабочим листом и скрываем основной контент
-        document.querySelector('main').style.display = 'none';
+        // Показываем контейнер с рабочим листом
         worksheetContainer.style.display = 'block';
     });
 
@@ -120,7 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     backToSelectionBtn.addEventListener('click', () => {
         worksheetContainer.style.display = 'none';
-        document.querySelector('main').style.display = 'block';
     });
 
     loadData();

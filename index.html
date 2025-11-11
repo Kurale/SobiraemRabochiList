@@ -23,32 +23,6 @@
             </div>
             <div id="selected-exercises-list"></div>
             <button id="generate-btn" disabled>Сгенерировать рабочий лист</button>
-            <div id="worksheet-container" style="display: none;">
-                <div class="print-controls">
-                    <button onclick="window.print()">Печать</button>
-                    <button id="toggle-answers">Показать/Скрыть ответы</button>
-                    <button id="back-to-selection">Вернуться к выбору</button>
-                </div>
-                <div id="worksheet-content">
-                    <header class="worksheet-header">
-                        <div class="editable-field">
-                            <label for="student-name">Имя ученика:</label>
-                            <input type="text" id="student-name" placeholder="________________">
-                        </div>
-                        <div class="editable-field">
-                            <label for="student-class">Класс:</label>
-                            <input type="text" id="student-class" placeholder="4 \"__\"">
-                        </div>
-                        <div class="editable-field">
-                            <label for="worksheet-date">Дата:</label>
-                            <input type="date" id="worksheet-date">
-                        </div>
-                    </header>
-                    <main id="exercises-worksheet">
-                        <!-- Задания будут вставлены сюда JS -->
-                    </main>
-                </div>
-            </div>
         </section>
 
         <section id="exercise-buffet">
@@ -61,6 +35,34 @@
             </div>
         </section>
     </main>
+
+    <!-- Контейнер для рабочего листа (изначально скрыт) -->
+    <div id="worksheet-container" style="display: none;">
+        <div class="print-controls">
+            <button onclick="window.print()">Печать</button>
+            <button id="toggle-answers">Показать/Скрыть ответы</button>
+            <button id="back-to-selection">Вернуться к выбору</button>
+        </div>
+        <div id="worksheet-content">
+            <header class="worksheet-header">
+                <div class="editable-field">
+                    <label for="student-name">Имя ученика:</label>
+                    <input type="text" id="student-name" placeholder="________________">
+                </div>
+                <div class="editable-field">
+                    <label for="student-class">Класс:</label>
+                    <input type="text" id="student-class" placeholder="4 \"__\"">
+                </div>
+                <div class="editable-field">
+                    <label for="worksheet-date">Дата:</label>
+                    <input type="date" id="worksheet-date">
+                </div>
+            </header>
+            <main id="exercises-worksheet">
+                <!-- Задания будут вставлены сюда JS -->
+            </main>
+        </div>
+    </div>
 
     <script src="js/app.js"></script>
 </body>
