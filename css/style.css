@@ -246,14 +246,10 @@ main {
 }
 
 .answer {
-    display: none; /* Ответы скрыты по умолчанию */
+    display: none !important; /* Ответы всегда скрыты */
     margin-left: 1rem;
     color: #d9534f;
     font-weight: bold;
-}
-
-.answer.visible {
-    display: inline;
 }
 
 /* --- СТИЛИ ДЛЯ ПЕЧАТИ --- */

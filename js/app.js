@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const generateBtn = document.getElementById('generate-btn');
     const worksheetContainer = document.getElementById('worksheet-container');
     const exercisesWorksheet = document.getElementById('exercises-worksheet');
-    const toggleAnswersBtn = document.getElementById('toggle-answers');
     const backToSelectionBtn = document.getElementById('back-to-selection');
     const worksheetDate = document.getElementById('worksheet-date');
     const pageTitle = document.getElementById('page-title');
@@ -126,12 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Показываем контейнер с рабочим листом
         worksheetContainer.style.display = 'block';
-    });
-
-    toggleAnswersBtn.addEventListener('click', () => {
-        document.querySelectorAll('.answer').forEach(answer => {
-            answer.classList.toggle('visible');
-        });
     });
 
     backToSelectionBtn.addEventListener('click', () => {
