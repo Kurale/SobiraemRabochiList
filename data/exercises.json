@@ -4,7 +4,8 @@
   "categories": [
     { "id": "simple", "name": "Простые примеры", "color": "#4CAF50" },
     { "id": "medium", "name": "Задачи в 2-3 действия", "color": "#FF9800" },
-    { "id": "hard", "name": "Сложные задачи", "color": "#F44336" }
+    { "id": "hard", "name": "Сложные задачи", "color": "#F44336" },
+    { "id": "graphic", "name": "Графические задания", "color": "#9C27B0" }
   ],
   "exercises": [
     {
@@ -86,6 +87,33 @@
       "answer": "406",
       "points": 15,
       "categoryId": "medium"
+    },
+    {
+      "id": "ex011",
+      "type": "graphic",
+      "text": "Определи время на часах",
+      "image": "img/watch_1.png",
+      "answer": "3:15",
+      "points": 20,
+      "categoryId": "graphic"
+    },
+    {
+      "id": "ex012",
+      "type": "graphic",
+      "text": "Напиши цифрами число",
+      "image": "img/ImenovChisla.png",
+      "answer": "45",
+      "points": 15,
+      "categoryId": "graphic"
+    },
+    {
+      "id": "ex013",
+      "type": "graphic",
+      "text": "Найди периметр прямоугольника",
+      "image": "img/PerPl.png",
+      "answer": "24",
+      "points": 25,
+      "categoryId": "graphic"
     }
   ]
 }

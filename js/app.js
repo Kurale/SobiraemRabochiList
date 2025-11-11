@@ -44,13 +44,20 @@ document.addEventListener('DOMContentLoaded', () => {
             card.dataset.points = exercise.points;
             card.style.borderColor = category.color;
 
-            card.innerHTML = `
+            let cardContent = `
                 <div class="card-header">
                     <span class="card-category" style="background-color: ${category.color}">${category.name}</span>
                     <span class="card-points">${exercise.points} балл.</span>
                 </div>
                 <div class="card-text">${exercise.text}</div>
             `;
+            
+            // Добавляем изображение для графических заданий
+            if (exercise.type === 'graphic' && exercise.image) {
+                cardContent += `<div class="card-image"><img src="${exercise.image}" alt="${exercise.text}" /></div>`;
+            }
+            
+            card.innerHTML = cardContent;
 
             card.addEventListener('click', () => toggleExercise(exercise, card));
             exercisesContainer.appendChild(card);
@@ -115,13 +122,25 @@ document.addEventListener('DOMContentLoaded', () => {
         exercisesWorksheet.style.gridTemplateColumns = `repeat(${columnsCount}, 1fr)`;
         
         // Генерируем HTML для заданий
-        exercisesWorksheet.innerHTML = selectedExercises.map((ex, index) => `
-            <div class="worksheet-item">
-                <span class="item-number">${index + 1}.</span>
-                <span class="item-text">${ex.text}</span>
-                <span class="answer">Ответ: ${ex.answer}</span>
-            </div>
-        `).join('');
+        exercisesWorksheet.innerHTML = selectedExercises.map((ex, index) => {
+            let exerciseContent = `
+                <div class="worksheet-item">
+                    <span class="item-number">${index + 1}.</span>
+                    <span class="item-text">${ex.text}</span>
+            `;
+            
+            // Добавляем изображение для графических заданий
+            if (ex.type === 'graphic' && ex.image) {
+                exerciseContent += `<div class="exercise-image"><img src="${ex.image}" alt="${ex.text}" /></div>`;
+            }
+            
+            exerciseContent += `
+                    <span class="answer">Ответ: ${ex.answer}</span>
+                </div>
+            `;
+            
+            return exerciseContent;
+        }).join('');
         
         // Показываем контейнер с рабочим листом
         worksheetContainer.style.display = 'block';
