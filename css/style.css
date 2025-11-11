@@ -216,14 +216,33 @@ main {
     font-size: 1rem;
 }
 
+#exercises-worksheet {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    width: 100%;
+}
+
 #exercises-worksheet .worksheet-item {
-    margin-bottom: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
     break-inside: avoid; /* Предотвращает разрыв элемента при печати */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 #exercises-worksheet .worksheet-item .item-number {
     font-weight: bold;
     margin-right: 0.5rem;
+    color: #2196F3;
+}
+
+#exercises-worksheet .worksheet-item .item-text {
+    flex-grow: 1;
+    margin-bottom: 0.5rem;
 }
 
 .answer {
@@ -257,6 +276,18 @@ main {
         box-shadow: none;
         border: none;
         padding: 1.5cm; /* Отступы для печати */
+    }
+    
+    /* Оптимизация сетки для печати */
+    #exercises-worksheet {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.8cm !important;
+    }
+    
+    /* Уменьшаем отступы в ячейках при печати */
+    .worksheet-item {
+        padding: 0.5cm !important;
+        margin-bottom: 0 !important;
     }
     
     /* Скрываем ответы при печати по умолчанию */

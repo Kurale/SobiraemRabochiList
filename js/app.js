@@ -98,6 +98,23 @@ document.addEventListener('DOMContentLoaded', () => {
         // Устанавливаем текущую дату в поле ввода
         worksheetDate.valueAsDate = new Date();
         
+        // Вычисляем оптимальное количество колонок в зависимости от количества заданий
+        const exerciseCount = selectedExercises.length;
+        let columnsCount;
+        
+        if (exerciseCount <= 2) {
+            columnsCount = 1;
+        } else if (exerciseCount <= 6) {
+            columnsCount = 2;
+        } else if (exerciseCount <= 12) {
+            columnsCount = 3;
+        } else {
+            columnsCount = 4;
+        }
+        
+        // Устанавливаем количество колонок для сетки
+        exercisesWorksheet.style.gridTemplateColumns = `repeat(${columnsCount}, 1fr)`;
+        
         // Генерируем HTML для заданий
         exercisesWorksheet.innerHTML = selectedExercises.map((ex, index) => `
             <div class="worksheet-item">
