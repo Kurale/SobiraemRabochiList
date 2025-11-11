@@ -6,9 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const targetScoreSummaryEl = document.getElementById('target-score-summary');
     const progressFillEl = document.getElementById('progress-fill');
     const generateBtn = document.getElementById('generate-btn');
-    const linkContainer = document.getElementById('link-container');
-    const generatedLinkInput = document.getElementById('generated-link');
-    const copyLinkBtn = document.getElementById('copy-link-btn');
+    const worksheetContainer = document.getElementById('worksheet-container');
+    const exercisesWorksheet = document.getElementById('exercises-worksheet');
+    const toggleAnswersBtn = document.getElementById('toggle-answers');
+    const backToSelectionBtn = document.getElementById('back-to-selection');
+    const worksheetDate = document.getElementById('worksheet-date');
     const pageTitle = document.getElementById('page-title');
 
     let allData = null;
@@ -93,21 +95,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     generateBtn.addEventListener('click', () => {
-        const exerciseIds = selectedExercises.map(ex => ex.id);
-        const encodedData = btoa(JSON.stringify(exerciseIds)); // Кодируем в Base64
-        const url = `${window.location.origin}/worksheet.html?data=${encodedData}`;
+        // Устанавливаем текущую дату в поле ввода
+        worksheetDate.valueAsDate = new Date();
         
-        generatedLinkInput.value = url;
-        linkContainer.style.display = 'block';
+        // Генерируем HTML для заданий
+        exercisesWorksheet.innerHTML = selectedExercises.map((ex, index) => `
+            <div class="worksheet-item">
+                <span class="item-number">${index + 1}.</span>
+                <span class="item-text">${ex.text}</span>
+                <span class="answer">Ответ: ${ex.answer}</span>
+            </div>
+        `).join('');
+        
+        // Показываем контейнер с рабочим листом и скрываем основной контент
+        document.querySelector('main').style.display = 'none';
+        worksheetContainer.style.display = 'block';
     });
 
-    copyLinkBtn.addEventListener('click', () => {
-        generatedLinkInput.select();
-        document.execCommand('copy');
-        copyLinkBtn.textContent = 'Скопировано!';
-        setTimeout(() => {
-            copyLinkBtn.textContent = 'Копировать';
-        }, 2000);
+    toggleAnswersBtn.addEventListener('click', () => {
+        document.querySelectorAll('.answer').forEach(answer => {
+            answer.classList.toggle('visible');
+        });
+    });
+
+    backToSelectionBtn.addEventListener('click', () => {
+        worksheetContainer.style.display = 'none';
+        document.querySelector('main').style.display = 'block';
     });
 
     loadData();
