@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конструктор рабочих листов</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1 id="page-title">Конструктор рабочих листов</h1>
+        <p>Выберите задания, чтобы набрать <strong id="target-score">100</strong> баллов.</p>
+    </header>
+
+    <main>
+        <section id="worksheet-summary">
+            <h2>Мой рабочий лист</h2>
+            <div class="score-container">
+                <span>Набрано баллов: <strong id="current-score">0</strong> / <strong id="target-score-summary">100</strong></span>
+                <div class="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+            </div>
+            <div id="selected-exercises-list"></div>
+            <button id="generate-btn" disabled>Сгенерировать рабочий лист</button>
+            <div id="link-container" style="display: none;">
+                <p>Ваша личная ссылка:</p>
+                <input type="text" id="generated-link" readonly>
+                <button id="copy-link-btn">Копировать</button>
+            </div>
+        </section>
+
+        <section id="exercise-buffet">
+            <h2>Доступные задания</h2>
+            <div id="filters">
+                <!-- Фильтры будут добавлены JS -->
+            </div>
+            <div id="exercises-container">
+                <!-- Карточки заданий будут вставлены сюда JS -->
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

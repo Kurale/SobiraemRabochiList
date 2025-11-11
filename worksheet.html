@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рабочий лист</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="print-controls">
+        <button onclick="window.print()">Печать</button>
+        <button id="toggle-answers">Показать/Скрыть ответы</button>
+    </div>
+
+    <div id="worksheet-content">
+        <header class="worksheet-header">
+            <div class="editable-field">
+                <label for="student-name">Имя ученика:</label>
+                <input type="text" id="student-name" placeholder="________________">
+            </div>
+            <div class="editable-field">
+                <label for="student-class">Класс:</label>
+                <input type="text" id="student-class" placeholder="4 \"__\"">
+            </div>
+            <div class="editable-field">
+                <label for="worksheet-date">Дата:</label>
+                <input type="date" id="worksheet-date">
+            </div>
+        </header>
+        <main id="exercises-worksheet">
+            <!-- Задания будут вставлены сюда JS -->
+        </main>
+    </div>
+
+    <script src="js/worksheet.js"></script>
+</body>
+</html>

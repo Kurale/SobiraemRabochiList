@@ -1,0 +1,91 @@
+{
+  "title": "Задания по математике для 4 класса. Тема: Умножение и деление.",
+  "targetScore": 100,
+  "categories": [
+    { "id": "simple", "name": "Простые примеры", "color": "#4CAF50" },
+    { "id": "medium", "name": "Задачи в 2-3 действия", "color": "#FF9800" },
+    { "id": "hard", "name": "Сложные задачи", "color": "#F44336" }
+  ],
+  "exercises": [
+    {
+      "id": "ex001",
+      "type": "example",
+      "text": "125 × 8 =",
+      "answer": "1000",
+      "points": 10,
+      "categoryId": "simple"
+    },
+    {
+      "id": "ex002",
+      "type": "example",
+      "text": "1056 : 3 =",
+      "answer": "352",
+      "points": 10,
+      "categoryId": "simple"
+    },
+    {
+      "id": "ex003",
+      "type": "example",
+      "text": "342 × 23 =",
+      "answer": "7866",
+      "points": 25,
+      "categoryId": "medium"
+    },
+    {
+      "id": "ex004",
+      "type": "problem",
+      "text": "В одной коробке 24 карандаша. Сколько карандашей в 15 таких коробках?",
+      "answer": "360",
+      "points": 20,
+      "categoryId": "medium"
+    },
+    {
+      "id": "ex005",
+      "type": "problem",
+      "text": "Турист ехал на автобусе 3 часа со скоростью 60 км/ч и на поезде 5 часов со скоростью 70 км/ч. Какой путь проделал турист?",
+      "answer": "530",
+      "points": 50,
+      "categoryId": "hard"
+    },
+    {
+      "id": "ex006",
+      "type": "example",
+      "text": "4500 : 90 =",
+      "answer": "50",
+      "points": 10,
+      "categoryId": "simple"
+    },
+    {
+      "id": "ex007",
+      "type": "problem",
+      "text": "Фермер собрал с каждого из 12 гектаров по 35 тонн картофеля. Сколько всего тонн картофеля собрал фермер?",
+      "answer": "420",
+      "points": 20,
+      "categoryId": "medium"
+    },
+    {
+      "id": "ex008",
+      "type": "example",
+      "text": "1809 × 4 =",
+      "answer": "7236",
+      "points": 15,
+      "categoryId": "simple"
+    },
+    {
+      "id": "ex009",
+      "type": "problem",
+      "text": "Купили 5 пакетов сахара по 3 кг в каждом и 4 пачки масла по 2 кг. Какова общая масса покупки?",
+      "answer": "23",
+      "points": 30,
+      "categoryId": "hard"
+    },
+    {
+      "id": "ex010",
+      "type": "example",
+      "text": "8120 : 20 =",
+      "answer": "406",
+      "points": 15,
+      "categoryId": "medium"
+    }
+  ]
+}
