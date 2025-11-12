@@ -146,13 +146,13 @@ main {
 }
 
 .card-image {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     text-align: center;
 }
 
 .card-image img {
     max-width: 100%;
-    max-height: 150px;
+    max-height: 200px;
     object-fit: contain;
     border-radius: 4px;
 }
@@ -251,7 +251,7 @@ main {
     background: white;
     max-width: 800px;
     margin: 0 auto;
-    padding: 2rem 3rem;
+    padding: 1rem 2rem;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0,0,0,0.05);
     width: 100%;
@@ -291,7 +291,7 @@ main {
 #exercises-worksheet .worksheet-item {
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 1rem;
+    padding: 0.5rem;
     break-inside: avoid; /* Предотвращает разрыв элемента при печати */
     display: flex;
     flex-direction: column;
@@ -317,7 +317,7 @@ main {
 
 .exercise-image img {
     max-width: 100%;
-    max-height: 120px;
+    max-height: 150px;
     object-fit: contain;
     border-radius: 4px;
     border: 1px solid #ddd;
@@ -349,7 +349,7 @@ main {
         width: 100%;
         box-shadow: none;
         border: none;
-        padding: 1.5cm; /* Отступы для печати */
+        padding: 0.5cm; /* Отступы для печати */
     }
     
     /* Оптимизация сетки для печати */
@@ -376,7 +376,7 @@ main {
     /* Настройки страницы A4 */
     @page {
         size: A4;
-        margin: 1.5cm;
+        margin: 0.5cm;
     }
     
     /* Убираем поля у body */
