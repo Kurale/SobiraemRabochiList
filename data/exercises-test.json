@@ -94,8 +94,7 @@
       "id": "ex012",
       "type": "graphic",
       "text": "Напиши цифрами число",
-      "image": "img/ImenovChisla.png",
-      "answer": "45",
+      "image": "img/Delenie_1.png",
       "points": 15,
       "categoryId": "graphic"
     },
