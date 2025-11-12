@@ -11,19 +11,43 @@ document.addEventListener('DOMContentLoaded', () => {
     const backToSelectionBtn = document.getElementById('back-to-selection');
     const worksheetDate = document.getElementById('worksheet-date');
     const pageTitle = document.getElementById('page-title');
+    const codewordInput = document.getElementById('codeword-input');
+    const loadExercisesBtn = document.getElementById('load-exercises-btn');
+    const loadingStatus = document.getElementById('loading-status');
+    const instructions = document.getElementById('instructions');
 
     let allData = null;
     let selectedExercises = [];
 
-    // Загрузка данных из JSON
-    async function loadData() {
+    // Загрузка данных из JSON на основе кодового слова
+    async function loadData(codeword = '') {
         try {
-            const response = await fetch('data/exercises.json');
+            loadingStatus.style.display = 'block';
+            exercisesContainer.innerHTML = '';
+            
+            let dataPath;
+            if (codeword.trim() === '') {
+                // Если кодовое слово не введено, используем стандартный файл
+                dataPath = 'data/exercises.json';
+            } else {
+                // Используем файл с кодовым словом
+                dataPath = `data/exercises-${codeword}.json`;
+            }
+            
+            const response = await fetch(dataPath);
+            
+            if (!response.ok) {
+                throw new Error(`Файл не найден: ${dataPath}`);
+            }
+            
             allData = await response.json();
+            loadingStatus.style.display = 'none';
+            instructions.style.display = 'block';
             initializeApp();
         } catch (error) {
             console.error("Ошибка загрузки данных:", error);
-            exercisesContainer.innerHTML = "<p>Не удалось загрузить задания. Проверьте файл data/exercises.json</p>";
+            loadingStatus.style.display = 'none';
+            exercisesContainer.innerHTML = `<p>Не удалось загрузить задания для кодового слова "${codeword}". Проверьте правильность кодового слова или попробуйте другой.</p>`;
         }
     }
 
@@ -150,5 +174,20 @@ document.addEventListener('DOMContentLoaded', () => {
         worksheetContainer.style.display = 'none';
     });
 
-    loadData();
+    // Обработчик для кнопки загрузки упражнений
+    loadExercisesBtn.addEventListener('click', () => {
+        const codeword = codewordInput.value.trim();
+        loadData(codeword);
+    });
+
+    // Обработчик для нажатия Enter в поле ввода кодового слова
+    codewordInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            const codeword = codewordInput.value.trim();
+            loadData(codeword);
+        }
+    });
+
+    // Изначально скрываем инструкции до загрузки данных
+    instructions.style.display = 'none';
 });

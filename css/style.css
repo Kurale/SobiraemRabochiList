@@ -14,6 +14,55 @@ header {
     text-align: center;
 }
 
+#codeword-container {
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#codeword-container label {
+    font-weight: bold;
+    color: #555;
+}
+
+#codeword-input {
+    padding: 0.5rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 200px;
+    transition: border-color 0.3s;
+}
+
+#codeword-input:focus {
+    outline: none;
+    border-color: #2196F3;
+}
+
+#load-exercises-btn {
+    padding: 0.5rem 1.5rem;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+#load-exercises-btn:hover {
+    background-color: #0b7dda;
+}
+
+#loading-status {
+    margin: 1rem 0;
+    font-style: italic;
+    color: #666;
+}
+
 main {
     display: flex;
     gap: 2rem;

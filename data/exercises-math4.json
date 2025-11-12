@@ -1,0 +1,119 @@
+{
+  "title": "Задания по математике для 4 класса. Тема: Сложение и вычитание.",
+  "targetScore": 100,
+  "categories": [
+    { "id": "simple", "name": "Простые примеры", "color": "#4CAF50" },
+    { "id": "medium", "name": "Задачи в 2-3 действия", "color": "#FF9800" },
+    { "id": "hard", "name": "Сложные задачи", "color": "#F44336" },
+    { "id": "graphic", "name": "Графические задания", "color": "#9C27B0" }
+  ],
+  "exercises": [
+    {
+      "id": "math001",
+      "type": "example",
+      "text": "542 + 238 =",
+      "answer": "780",
+      "points": 10,
+      "categoryId": "simple"
+    },
+    {
+      "id": "math002",
+      "type": "example",
+      "text": "845 - 327 =",
+      "answer": "518",
+      "points": 10,
+      "categoryId": "simple"
+    },
+    {
+      "id": "math003",
+      "type": "example",
+      "text": "1234 + 5678 =",
+      "answer": "6912",
+      "points": 15,
+      "categoryId": "medium"
+    },
+    {
+      "id": "math004",
+      "type": "problem",
+      "text": "В библиотеке было 845 книг. За месяц выдали 237 книг, а приняли 156 новых. Сколько книг стало в библиотеке?",
+      "answer": "764",
+      "points": 25,
+      "categoryId": "medium"
+    },
+    {
+      "id": "math005",
+      "type": "problem",
+      "text": "На складе было 1250 кг муки. В первый день продали 345 кг, во второй - на 120 кг меньше, чем в первый. Сколько муки осталось на складе?",
+      "answer": "560",
+      "points": 30,
+      "categoryId": "hard"
+    },
+    {
+      "id": "math006",
+      "type": "example",
+      "text": "700 - 456 =",
+      "answer": "244",
+      "points": 10,
+      "categoryId": "simple"
+    },
+    {
+      "id": "math007",
+      "type": "problem",
+      "text": "В саду росло 340 яблонь и 280 груш. Посадили еще 150 фруктовых деревьев. Сколько всего фруктовых деревьев стало в саду?",
+      "answer": "770",
+      "points": 20,
+      "categoryId": "medium"
+    },
+    {
+      "id": "math008",
+      "type": "example",
+      "text": "4321 + 6789 =",
+      "answer": "11110",
+      "points": 15,
+      "categoryId": "simple"
+    },
+    {
+      "id": "math009",
+      "type": "problem",
+      "text": "Турист прошел в первый день 24 км, во второй - на 8 км больше, чем в первый, а в третий - на 6 км меньше, чем во второй. Какой путь прошел турист за три дня?",
+      "answer": "74",
+      "points": 35,
+      "categoryId": "hard"
+    },
+    {
+      "id": "math010",
+      "type": "example",
+      "text": "10000 - 5678 =",
+      "answer": "4322",
+      "points": 15,
+      "categoryId": "medium"
+    },
+    {
+      "id": "math011",
+      "type": "graphic",
+      "text": "Определи время на часах",
+      "image": "img/watch_1.png",
+      "answer": "3:15",
+      "points": 20,
+      "categoryId": "graphic"
+    },
+    {
+      "id": "math012",
+      "type": "graphic",
+      "text": "Напиши цифрами число",
+      "image": "img/ImenovChisla.png",
+      "answer": "45",
+      "points": 15,
+      "categoryId": "graphic"
+    },
+    {
+      "id": "math013",
+      "type": "graphic",
+      "text": "Найди периметр прямоугольника",
+      "image": "img/PerPl.png",
+      "answer": "24",
+      "points": 25,
+      "categoryId": "graphic"
+    }
+  ]
+}

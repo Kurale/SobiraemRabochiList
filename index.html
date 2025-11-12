@@ -9,7 +9,13 @@
 <body>
     <header>
         <h1 id="page-title">Конструктор рабочих листов</h1>
-        <p>Выберите задания, чтобы набрать <strong id="target-score">100</strong> баллов.</p>
+        <div id="codeword-container">
+            <label for="codeword-input">Введите кодовое слово:</label>
+            <input type="text" id="codeword-input" placeholder="Например: math4">
+            <button id="load-exercises-btn">Загрузить задания</button>
+        </div>
+        <div id="loading-status" style="display: none;">Загрузка...</div>
+        <p id="instructions" style="display: none;">Выберите задания, чтобы набрать <strong id="target-score">100</strong> баллов.</p>
     </header>
 
     <main>
