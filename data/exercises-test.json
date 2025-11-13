@@ -3,7 +3,7 @@
   "targetScore": 100,
   "categories": [
     { "id": "simple", "name": "Простые примеры", "color": "#4CAF50" },
-    { "id": "medium", "name": "Задачи в 2-3 действия", "color": "#FF9800" },
+    { "id": "medium", "name": "Задачи простые", "color": "#FF9800" },
     { "id": "hard", "name": "Сложные задачи", "color": "#F44336" },
     { "id": "graphic", "name": "Графические задания", "color": "#9C27B0" }
   ],
@@ -11,27 +11,19 @@
     {
       "id": "ex001",
       "type": "example",
-      "text": "125 × 8 =",
-      "answer": "1000",
+      "text": "37 + 48 + 63 + 52 =<br>45 + 69 + 31 + 55 =<br>46 + 31 + 24 + 49 =<br>62 + 43 + 28 + 27 =",
       "points": 10,
       "categoryId": "simple"
     },
     {
       "id": "ex002",
       "type": "example",
-      "text": "37 + 48 + 63 + 52 =<br>45 + 69 + 31 + 55 =<br>46 + 31 + 24 + 49 =<br>62 + 43 + 28 + 27 =",
-      "points": 10,
-      "categoryId": "simple"
-    },
-    {
-      "id": "ex003",
-      "type": "example",
       "text": "____ : 5 = 5 (ост. 3)<br>____ : 3 = 8 (ост. 4)",
       "points": 25,
       "categoryId": "medium"
     },
     {
-      "id": "ex004",
+      "id": "ex003",
       "type": "problem",
       "text": "В одной коробке 24 карандаша. Сколько карандашей в 15 таких коробках?",
       "answer": "360",
@@ -39,7 +31,7 @@
       "categoryId": "medium"
     },
     {
-      "id": "ex005",
+      "id": "ex004",
       "type": "problem",
       "text": "Турист ехал на автобусе 3 часа со скоростью 60 км/ч и на поезде 5 часов со скоростью 70 км/ч. Какой путь проделал турист?",
       "answer": "530",
@@ -47,42 +39,42 @@
       "categoryId": "hard"
     },
     {
-      "id": "ex006",
+      "id": "ex005",
       "type": "example",
       "text": "82 дм + 18 дм = _____ дм = ____ м<br5 м – 50 см = _____ см = ___ м ___ дм>",
       "points": 10,
       "categoryId": "simple"
     },
     {
-      "id": "ex007",
+      "id": "ex006",
       "type": "problem",
       "text": "Длина прямоугольника 30 мм, что в 2 раза больше его ширины. Найди периметр прямоугольника.",
       "points": 20,
       "categoryId": "medium"
     },
     {
-    "id": "math008",
+    "id": "math007",
     "type": "example",
     "text": "4321 + 6789 =<br>5000 + 2500 =<br>1234 + 8765 =<br>9999 + 1111 =",
     "points": 15,
     "categoryId": "simple"
   },
     {
-      "id": "ex009",
+      "id": "ex008",
       "type": "problem",
       "text": "Периметр квадрата со стороной 25 см больше периметра равностороннего треугольника на 19 см. Найди длину стороны треугольника.",
       "points": 30,
       "categoryId": "hard"
     },
     {
-      "id": "ex010",
+      "id": "ex009",
       "type": "example",
       "text": "350 : 50 =<br>630 : 70 =<br>640 : 80 =<br>960 : 60 =<br>840 : 70 =<br>720 : 30 =<br>50 : 50 =<br>960 : 80 =",
       "points": 15,
       "categoryId": "medium"
     },
     {
-      "id": "ex011",
+      "id": "ex010",
       "type": "graphic",
       "text": "Определи время на часах",
       "image": "img/watch_1.png",
@@ -91,7 +83,7 @@
       "categoryId": "graphic"
     },
     {
-      "id": "ex012",
+      "id": "ex011",
       "type": "graphic",
       "text": "Выполни деление",
       "image": "img/Delenie_1.png",
@@ -99,7 +91,7 @@
       "categoryId": "graphic"
     },
     {
-      "id": "ex013",
+      "id": "ex012",
       "type": "graphic",
       "text": "Найди периметр прямоугольника",
       "image": "img/PerPl.png",
