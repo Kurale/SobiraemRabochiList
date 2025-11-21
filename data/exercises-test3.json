@@ -100,6 +100,15 @@
       "answer": "56",
       "points": 25,
       "categoryId": "graphic"
+    },
+    {
+      "id": "ex012",
+      "type": "graphic",
+      "text": "Найди площадь закрашенной фигуры",
+      "image": "img/task_1.png",
+      "answer": "56",
+      "points": 25,
+      "categoryId": "graphic"
     }
   ]
 }
